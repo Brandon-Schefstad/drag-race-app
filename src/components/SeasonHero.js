@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+
 import QueenCard from './QueenCard';
 
 const SeasonHero = ({ isLoaded, cast }) => {
@@ -7,6 +9,7 @@ const SeasonHero = ({ isLoaded, cast }) => {
 		// cast.forEach((queen) => {
 		// 	console.log(queen.name);
 		// });
+
 		return (
 			<div className="seasonHero grid">
 				{cast.map((queen) => {

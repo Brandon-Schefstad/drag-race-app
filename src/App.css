@@ -87,8 +87,13 @@ select {
 }
 .queenImage {
 	max-width: 70%;
-
 	max-height: 380px;
+	align-self: center;
+	justify-self: center;
+	margin: auto;
+}
+.queenImageFocus {
+	max-height: 600px;
 	align-self: center;
 	justify-self: center;
 	margin: auto;
@@ -103,4 +108,21 @@ select {
 	width: 70%;
 	margin: auto;
 	padding: 1rem;
+}
+
+.queenHero,
+.queenHero2 {
+	background-color: rebeccapurple;
+	height: 95%;
+	position: absolute;
+	width: 95%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.queenHero2 {
+	background-color: yellow;
+	border: 2px solid pink;
 }
