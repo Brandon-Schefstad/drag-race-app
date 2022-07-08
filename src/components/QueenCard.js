@@ -9,7 +9,16 @@ const QueenCard = ({ name, id, image }) => {
 		function logger() {
 			console.log('clicked');
 		}
-
+		async function fetchData() {
+			const url = `http://www.nokeynoshade.party/api/queens/${id}`;
+			try {
+				const response = await fetch(url);
+				const data = await response.json(); //Don't forget to use awaits!
+				console.log(data);
+			} catch (error) {
+				console.error(error);
+			}
+		}
 		return (
 			<div>
 				<h1 className="queenName">
@@ -19,6 +28,7 @@ const QueenCard = ({ name, id, image }) => {
 					className="queenImage"
 					onClick={() => {
 						setQueenFocus(name);
+						fetchData();
 					}}
 					src={image}
 					alt=""
@@ -29,16 +39,7 @@ const QueenCard = ({ name, id, image }) => {
 		function logger() {
 			console.log('clicked2');
 		}
-		async function fetchData(season) {
-			const url = `http://www.nokeynoshade.party/api/queens/${id}`;
-			try {
-				const response = await fetch(url);
-				const data = await response.json(); //Don't forget to use awaits!
-				console.log(data);
-			} catch (error) {
-				console.error(error);
-			}
-		}
+
 		return (
 			<section
 				onClick={() => {
@@ -62,6 +63,7 @@ const QueenCard = ({ name, id, image }) => {
 				{/* End of queenCloseup */}
 				<section className="queenInfo">
 					{/* Quote */}
+
 					{/* Seasons */}
 					{/*  */}
 				</section>
